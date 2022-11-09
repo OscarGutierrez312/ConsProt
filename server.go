@@ -7,7 +7,9 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", server)
+	fileServer := http.FileServer(http.Dir("./static"))
+	http.Handle("/", fileServer)
+	http.HandleFunc("/home", server)
 	if err := http.ListenAndServe(":8080", nil);err != nil {
 		log.Fatal(err)
 	}
