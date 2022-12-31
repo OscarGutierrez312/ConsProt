@@ -1,0 +1,11 @@
+<div class="example-form-field">
+    <p>agenda works!</p>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date"> 
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker">
+        <mat-icon matDatepickerToggleIcon>
+            mouse
+        </mat-icon>
+    </mat-datepicker-toggle> 
+    <mat-datepicker #picker></mat-datepicker>
+</div>
