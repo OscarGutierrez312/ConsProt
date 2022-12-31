@@ -1,23 +1,20 @@
 
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="over">
-        
-            <button type="button" mat-icon-button (click)="drawer.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button>
+<mat-drawer-container class="example-container" >
+    <mat-drawer #drawer class="example-sidenav" mode="side">
           
-            <button mat-icon-button class="sideBarButton1"
+            <div class="cont">
+              <button mat-icon-button class="sideBarButton1"
                 [routerLink]="'/inicio'"
                 (click)="drawer.toggle()">            
                     <mat-icon>assignment_ind</mat-icon>
             </button>
             
-            
-            <button mat-icon-button class="sideBarButton2"
+            <button mat-icon-button class="sideBarButton1"
                 [routerLink]="'/registro'"
                 (click)="drawer.toggle()">
                 <mat-icon>assignment</mat-icon>
             </button>
+            </div>
         
     </mat-drawer>
   

@@ -18,20 +18,28 @@
   }
   
   .example-sidenav {
-    height: 100%; 
-    padding: 30px;
-     
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+  }
+
+  .cont{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   .sideBarButton1{  
-    position:fixed;
     transform: scale(1.5);
+    margin: 10px;
+    /*position:fixed;
     top:180px;
-    left:38px;
+    left:38px;*/
   }
   .sideBarButton2{
-    position:fixed; 
     transform: scale(1.5);
+    /*position:fixed; 
     top:280px;
-    left:38px;
+    left:38px;*/
   }
