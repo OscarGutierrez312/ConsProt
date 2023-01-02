@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./solicitud.component.css']
 })
 export class SolicitudComponent {
-
+  dependencias=[
+    {desc:"Psicología"},
+    {desc:"Proyecto Curricular"},
+    {desc:"Permanencia"},
+    {desc:"Asesorías"}
+  ]
 }

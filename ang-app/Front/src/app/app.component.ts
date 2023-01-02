@@ -8,6 +8,6 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Front';
   constructor(router:Router) {
-    router.navigate(['/inicio']);
+    router.navigate(['/agenda']);
   }
 }

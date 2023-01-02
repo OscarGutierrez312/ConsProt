@@ -1,5 +1,24 @@
 <div class="example-form-field">
-    <p>agenda works!</p>
+    <div class="row">
+        <h3>Estudiante</h3>
+        <h2 id="nomEst">Nombre del Estudiante</h2>
+        <button
+           class="btnInfo"
+           mat-raised-button
+           color="link"
+           [routerLink]="'/info'">Información del Estudiante
+        </button>
+     </div>
+     <div class="row">
+        <h3>Solicitud</h3>
+        <h2 id="tipo">Tipo de Solicitud</h2>
+        <button
+        class="btnAgend"
+         mat-raised-button
+         color="link"
+         [routerLink]="'/agenda'">Agendar
+      </button>
+     </div>
     <input matInput [matDatepicker]="picker" placeholder="Choose a date"> 
     <mat-hint>MM/DD/YYYY</mat-hint>
     <mat-datepicker-toggle matIconSuffix [for]="picker" open>
@@ -8,5 +27,12 @@
         </mat-icon>
     </mat-datepicker-toggle> 
     <mat-datepicker touchUi #picker></mat-datepicker>
-
+    <div class="row">
+        <h3>Descripción</h3>
+        <h2 id="descp">Descripción de la Solcitud</h2>
+     </div>
+     <mat-form-field appearance="fill" class="txtArea">
+        <mat-label>Comentarios</mat-label>
+        <textarea name="" id="" cols="300" rows="5" matInput></textarea>
+     </mat-form-field>
 </div>

@@ -1,5 +1,5 @@
 .container{
-    position:fixed;
+    position:absolute;
     right: 30px;
     top: 60px;
     margin-top: 10px;
@@ -7,4 +7,36 @@
     border: 1px solid #9f9f9f;
     width: 21%;
     height: 100%;
+    background-color: #f1f1f1;
 }
+.boxChat{
+    width: 75%;
+}
+.msg{
+    width: 50%;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    margin-left: 40%;
+    justify-items: center;
+    align-items: center;
+}
+.msgIcon{
+    margin-left: 90%;
+    margin-top: 10px;
+}
+.foot{
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+}
+.head{
+    height: 90%;
+}
+::ng-deep .mat-form-field-outline-start {
+    border-radius: 58px 0 0 58px !important;
+    min-width: 58px !important;
+  }
+  
+  ::ng-deep .mat-form-field-outline-end {
+    border-radius: 0 58px 58px 0 !important;
+  }

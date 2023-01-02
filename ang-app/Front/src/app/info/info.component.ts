@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./info.component.css']
 })
 export class InfoComponent {
-
+  dataSource=[
+    {
+      nomb:"Cálculo Diferencial",
+      nota:4.11,
+      obs:"Ninguna"
+    }
+  ]
+  displayedColumns: string[] = ['Asignatura', 'Nota', 'Observación'];
 }

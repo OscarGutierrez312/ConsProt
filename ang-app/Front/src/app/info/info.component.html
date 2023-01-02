@@ -1,4 +1,57 @@
 <div class="container">
+    <h2>Consejería</h2>
+    <div class="row">
+       <h3>Nombre</h3>
+       <h2 id="nomEst">Nombre del Estudiante</h2>
+       
+    </div>
+    <div class="row">
+       <h3>Código</h3>
+       <h2 id="tipo">20171543200</h2>
+       
+    </div>
+    <div class="row">
+       <h3>Proyecto Curricular</h3>
+       <h2 id="docs">Ingeniería Forestal</h2>
+       
+    </div>
+    <div class="row">
+       <h3>Promedio</h3>
+       <h2 id="descp">4.11</h2>
+    </div>
+    <div class="row">
+        <h3>Prueba Académica</h3>
+        <h2 id="descp">No</h2>
+     </div>
     
+     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="Asignatura">
+          <th mat-header-cell *matHeaderCellDef> Asignatura </th>
+          <td mat-cell *matCellDef="let element"> {{element.nomb}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="Nota">
+          <th mat-header-cell *matHeaderCellDef> Nota </th>
+          <td mat-cell *matCellDef="let element"> {{element.nota}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Observación">
+          <th mat-header-cell *matHeaderCellDef> Observación </th>
+          <td mat-cell *matCellDef="let element"> {{element.obs}} </td>
+        </ng-container>
+    
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+      
  </div>
  <app-chat></app-chat>

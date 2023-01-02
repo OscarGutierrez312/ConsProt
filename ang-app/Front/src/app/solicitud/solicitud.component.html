@@ -1,13 +1,57 @@
 <div class="container">
-   <button
+   <h2>Consejería</h2>
+   <div class="row">
+      <h3>Estudiante</h3>
+      <h2 id="nomEst">Nombre del Estudiante</h2>
+      <button
+         class="btnInfo"
+         mat-raised-button
+         color="link"
+         [routerLink]="'/info'">Información del Estudiante
+      </button>
+   </div>
+   <div class="row">
+      <h3>Solicitud</h3>
+      <h2 id="tipo">Tipo de Solicitud</h2>
+      <button
+      class="btnAgend"
        mat-raised-button
        color="link"
        [routerLink]="'/agenda'">Agendar
     </button>
-    <button
-       mat-raised-button
-       color="link"
-       [routerLink]="'/info'">Información del Estudiante
-    </button>
+   </div>
+   <div class="row">
+      <h3>Documentos</h3>
+      <h2 id="docs">Lista de Documentos</h2>
+      <mat-form-field class="selec">
+         <mat-label>Remitir a</mat-label>
+         <mat-select>
+            <mat-option
+               *ngFor="let dependencia of dependencias" [value]="dependencia.desc">
+               {{dependencia.desc}}
+            </mat-option>
+         </mat-select>
+      </mat-form-field>
+   </div>
+   <div class="row">
+      <h3>Descripción</h3>
+      <h2 id="descp">Descripción de la Solcitud</h2>
+   </div>
+   <mat-form-field appearance="fill" class="txtArea">
+      <mat-label>Comentarios</mat-label>
+      <textarea name="" id="" cols="300" rows="5" matInput></textarea>
+   </mat-form-field>
+   <div class="row">
+      <button
+         class="btnSol"
+         mat-raised-button
+         color="primary">Aceptar
+      </button>
+      <button
+         class="btnSol"
+         mat-raised-button
+         color="warn">Rechazar
+      </button>
+   </div>
 </div>
 <app-chat></app-chat>

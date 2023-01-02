@@ -1,3 +1,29 @@
 <div class="container">
-
+    <div class="head">
+        <mat-list>
+            <mat-list-item *ngFor="let message of messages">
+                <mat-icon class="msgIcon">face</mat-icon>
+                <mat-card class="msg">
+                    <p matListItemLine>
+                        <span class="demo-2"> {{message.content}}</span>
+                    </p>
+                </mat-card>
+                
+            </mat-list-item>
+        </mat-list>
+          
+    </div>
+    <mat-divider></mat-divider>
+    <div class="foot">
+        <mat-form-field class="boxChat">
+            <mat-label>Escribir un Mensaje</mat-label>
+            <input type="text" matInput>
+        </mat-form-field>
+        <button mat-icon-button>
+            <mat-icon>send</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>build</mat-icon>
+        </button>
+    </div>
 </div>

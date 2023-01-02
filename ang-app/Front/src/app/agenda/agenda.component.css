@@ -3,3 +3,51 @@
     margin-top: 200px;
     margin-left: 100px;
   }
+  .row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+.btnInfo{
+    margin-left: 39%;
+    margin-top: 30px;
+}
+.btnAgend{
+    margin-left: 47%;
+    margin-top: 30px;
+}
+h2{
+    margin: inherit;
+}
+h3{
+    margin-top: 2%;
+}
+  .selec{
+    margin-left: 40%;
+    margin-top: 30px;
+}
+.btnSol{
+    margin-left: 50px;
+    margin-top: -50px;
+}
+.txtArea{
+    width: 60%;
+    height: 150px;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+.row #nomEst{
+    margin-left: 100px;
+}
+.row #tipo{
+    margin-left: 120px;
+}
+.row #docs{
+    margin-left: 90px;
+}
+.row #descp{
+    margin-left: 100px;
+}
