@@ -33,3 +33,12 @@
   .spacer {
     flex: 1;
   }
+
+  .ident{
+    margin-right: 35px;
+    scale: 1.5;
+  }
+  .exit{
+    margin-right: 15px;
+    scale: 1.5;
+  }

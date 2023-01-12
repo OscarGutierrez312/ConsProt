@@ -1,38 +1,66 @@
 <div class="example-form-field">
     <div class="row">
-        <h3>Estudiante</h3>
-        <h2 id="nomEst">Nombre del Estudiante</h2>
-        <button
-           class="btnInfo"
-           mat-raised-button
-           color="link"
-           [routerLink]="'/info'">Información del Estudiante
-        </button>
+        
+        <mat-form-field class="titl">
+         <mat-label>Ingresar Título</mat-label>
+         <input matInput type="text" [(ngModel)]="value">
+         <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+           <mat-icon>close</mat-icon>
+         </button>
+       </mat-form-field>
+       
      </div>
+     <mat-divider></mat-divider>
+     <div class="row">
+      <h3>Estudiante</h3>
+      <h2 id="tipo">Nombre del Estudiante</h2>
+      
+   </div>
+   <mat-divider></mat-divider>
      <div class="row">
         <h3>Solicitud</h3>
         <h2 id="tipo">Tipo de Solicitud</h2>
-        <button
-        class="btnAgend"
-         mat-raised-button
-         color="link"
-         [routerLink]="'/agenda'">Agendar
-      </button>
+        
      </div>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date"> 
-    <mat-hint>MM/DD/YYYY</mat-hint>
-    <mat-datepicker-toggle matIconSuffix [for]="picker" open>
-        <mat-icon matDatepickerToggleIcon>
-            event
-        </mat-icon>
-    </mat-datepicker-toggle> 
-    <mat-datepicker touchUi #picker></mat-datepicker>
+     <mat-divider></mat-divider>
+      <mat-form-field>
+         <input matInput [matDatepicker]="picker" placeholder="Choose a date"> 
+         <mat-hint>MM/DD/YYYY</mat-hint>
+         <mat-datepicker-toggle matIconSuffix [for]="picker" open>
+            <mat-icon matDatepickerToggleIcon>
+                  event
+            </mat-icon>
+         </mat-datepicker-toggle> 
+         <mat-datepicker touchUi #picker></mat-datepicker>
+      </mat-form-field>
+    
+    <mat-form-field class="selec">
+      <mat-label>Horas</mat-label>
+      <mat-select>
+         <mat-option
+            *ngFor="let hora of horas" [value]="hora.desc">
+            {{hora.desc}}
+         </mat-option>
+      </mat-select>
+   </mat-form-field>
+   <mat-form-field class="selec">
+      <mat-label>Minutos</mat-label>
+      <mat-select>
+         <mat-option
+            *ngFor="let min of mins" [value]="min.desc">
+            {{min.desc}}
+         </mat-option>
+      </mat-select>
+   </mat-form-field>
+  <mat-divider></mat-divider>
     <div class="row">
         <h3>Descripción</h3>
-        <h2 id="descp">Descripción de la Solcitud</h2>
+        <mat-form-field appearance="fill" class="txtArea">
+         <mat-label>Ingrese una Descripción</mat-label>
+         <textarea name="" id="" cols="300" rows="5" matInput></textarea>
+      </mat-form-field>
      </div>
-     <mat-form-field appearance="fill" class="txtArea">
-        <mat-label>Comentarios</mat-label>
-        <textarea name="" id="" cols="300" rows="5" matInput></textarea>
-     </mat-form-field>
+     <mat-divider></mat-divider>
+     
+
 </div>
